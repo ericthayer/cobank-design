@@ -45,7 +45,7 @@ export const Home: React.FC = () => {
     <Box>
       <Box sx={{ mb: 6 }}>
         <Typography variant="h2" component="h1" gutterBottom>
-          CoBank Design System
+          CoBank Design
         </Typography>
         <Typography variant="h5" color="text.secondary" sx={{ mb: 3 }}>
           The single source of truth for CoBank's visual design language
