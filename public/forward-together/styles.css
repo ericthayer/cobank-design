@@ -54,7 +54,7 @@ dialog{border:1px solid var(--line);border-radius:12px;background:#fff;color:var
 }
 
 .section-divider--ranch-entry {
-  --divider-height: clamp(28px, 4vw, 62px);
+  --divider-height: clamp(28px, 4.4vw, 70px);
 }
 
 
