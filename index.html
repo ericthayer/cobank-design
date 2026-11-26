@@ -1,19 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/cobank-favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CoBank Design - The single source of truth for CoBank's visual design language" />
-    <meta name="keywords" content="design system, CoBank, UI components, style guide, brand guidelines" />
-    <title>CoBank Design</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102b3f">
+  <meta name="description" content="Human at heart. Forward by design. A modern CoBank design system experience connecting people, technology, and cooperative purpose.">
+  <title>CoBank Design System — Forward Together</title>
+  <link rel="icon" href="/forward-together/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/forward-together/assets/dm-sans-medium.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/forward-together/assets/agricultural-frontier.webp" as="image">
+  <link rel="stylesheet" href="/forward-together/styles.css">
+  <script type="module" src="/forward-together/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="CoBank Design System home"><img class="brand-logo" src="/forward-together/assets/cobank-logo.svg" width="140" height="22" alt="CoBank"><span class="brand-divider"></span><span class="brand-label">Design<br>System</span></a>
+    <nav aria-label="Main navigation" id="main-nav"><a href="#foundations">Foundations</a><a href="#components">Components</a><a href="#workflows">Workflows</a><a href="#resources">Resources</a></nav>
+    <div class="header-actions"><button class="search-trigger" data-search aria-label="Search the design system"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><kbd>⌘ K</kbd></button><button class="button button-small" data-guide="start">Get started <span aria-hidden="true">↗</span></button><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" aria-haspopup="dialog"><span></span><span></span></button></div>
+  </header>
+  <dialog id="mobile-navigation" class="mobile-navigation" aria-label="Menu">
+    <div class="mobile-navigation-header">
+      <span class="brand"><img class="brand-logo" src="/forward-together/assets/cobank-logo.svg" width="140" height="22" alt="CoBank"><span class="brand-divider"></span><span class="brand-label">Design<br>System</span></span>
+      <button class="mobile-navigation-close" type="button" data-menu-close aria-label="Close menu" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#foundations">Foundations <span aria-hidden="true">↗</span></a>
+      <a href="#components">Components <span aria-hidden="true">↗</span></a>
+      <a href="#workflows">Workflows <span aria-hidden="true">↗</span></a>
+      <a href="#resources">Resources <span aria-hidden="true">↗</span></a>
+    </nav>
+  </dialog>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <figure class="hero-art"><img src="/forward-together/assets/agricultural-frontier.webp" width="1672" height="941" alt="Cinematic illustration of an agricultural specialist and a farmer sharing ideas, with cooperative workers, green crop fields, and grain silos on the horizon." fetchpriority="high"><figcaption>OUR PEOPLE. OUR PURPOSE. OUR NEXT CHAPTER.</figcaption></figure>
+      <div class="hero-copy"><p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> THE COBANK DESIGN SYSTEM</p><h1 id="hero-heading">Human at heart.<br>Forward by<br><span>design.</span></h1><p class="hero-description">One shared language. A world of possibility.<br>Design and build experiences that move our<br class="desktop-break"> people, our products, and our purpose forward.</p><div class="hero-actions"><a class="button" href="#explore">Explore the system <span aria-hidden="true">↗</span></a><button class="text-link" data-guide="start">Find your starting point <span aria-hidden="true">→</span></button></div><div class="hero-footnote"><span>DESIGN</span><i aria-hidden="true">/</i><span>DEVELOP</span><i aria-hidden="true">/</i><span>DELIVER TOGETHER</span></div></div>
+
+      <svg class="section-divider section-divider--bottom section-divider--hero" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0 41 C190 55 356 34 555 20 C796 3 955 41 1137 39 C1251 37 1370 22 1440 14 V64 H0 Z"/>
+      </svg>
+    </section>
+    <section class="intro-band" aria-label="Our purpose"><p>One system.<br><strong>Collective impact.</strong></p><div>Great experiences connect us. Our shared foundations, components, and tools help every team build with clarity—for the people who power rural America.</div><a href="#workflows" class="round-link" aria-label="See how we work together">↘</a>
+    </section>
+    <section class="section explore" id="explore" aria-labelledby="explore-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE BUILDING BLOCKS OF BETTER</p><h2 id="explore-heading">A shared standard.<br>An open horizon.</h2></div><p>The foundations to move with confidence.<br>The flexibility to create what comes next.</p></div>
+      <div class="path-grid">
+        <article class="path" id="foundations"><a class="path-image foundation-visual" href="#foundation-detail" aria-label="Explore foundations"><span class="visual-label">DESIGN LANGUAGE</span><span class="visual-type">Aa<span>Clarity.<br>By design.</span></span><span class="visual-palette"><i></i><i></i><i></i><i></i></span></a><div class="path-heading"><h3>Start with clarity.</h3><a class="circle-arrow" href="#foundation-detail" aria-label="Explore foundations">↗</a></div><p>Color, type, space, and the principles that make every experience feel like CoBank.</p><a class="text-link" href="#foundation-detail">Explore foundations <span aria-hidden="true">→</span></a></article>
+        <article class="path" id="components"><a class="path-image component-visual" href="#component-detail" aria-label="Explore components"><span class="visual-label">CONSIDERED COMPONENTS</span><span class="visual-controls"><span class="visual-input">Choose your next step <b>⌄</b></span><span class="visual-row"><span class="visual-check">✓</span><span>Built to work together</span></span><span class="visual-button">Make progress <b>→</b></span></span></a><div class="path-heading"><h3>Build with confidence.</h3><a class="circle-arrow" href="#component-detail" aria-label="Explore components">↗</a></div><p>Reusable components and considered patterns. Familiar to our users. Flexible for your ideas.</p><a class="text-link" href="#component-detail">Explore components <span aria-hidden="true">→</span></a></article>
+        <article class="path path--workflows"><a class="path-image workflow-visual" href="#workflows" aria-label="Explore workflows"><span class="visual-label">CONNECTED WORKFLOWS</span><span class="workflow-diagram" aria-hidden="true"><i>↗</i><i>{ }</i><i>✓</i></span><span class="workflow-caption">Design. Develop. Deliver.</span></a><div class="path-heading"><h3>Move forward together.</h3><a class="circle-arrow" href="#workflows" aria-label="Explore workflows">↗</a></div><p>Practical guidance that connects design, development, and content from the first conversation.</p><a class="text-link" href="#workflows">Explore workflows <span aria-hidden="true">→</span></a></article>
+      </div>
+    </section>
+    <section class="work-section" id="workflows" aria-labelledby="work-heading"><div class="work-copy"><p class="eyebrow">FROM SHARED LANGUAGE TO SHARED PROGRESS</p><h2 id="work-heading">Great work.<br><em>Shared direction.</em></h2><p>One system. Different ways in. Bring your expertise; build on what we share.</p><div class="role-tabs" role="tablist" aria-label="Choose your discipline"><button id="tab-design" role="tab" aria-selected="true" aria-controls="role-panel" data-role="design">Design</button><button id="tab-develop" role="tab" aria-selected="false" aria-controls="role-panel" tabindex="-1" data-role="develop">Develop</button><button id="tab-content" role="tab" aria-selected="false" aria-controls="role-panel" tabindex="-1" data-role="content">Content</button></div><div id="role-panel" role="tabpanel" aria-labelledby="tab-design" tabindex="0"><h3>Start with the system. Make it your own.</h3><p>Find the right pattern, compose with shared components, and bring the details into focus.</p><button class="light-link" data-guide="design">Open the design field guide <span aria-hidden="true">↗</span></button></div></div><figure class="work-preview"><img src="/forward-together/assets/design-together.webp" width="1100" height="733" loading="lazy" alt="Illustrated design and engineering colleagues working together in a modern studio overlooking green agricultural fields."><figcaption><span>DIFFERENT PERSPECTIVES.</span><span>A SHARED AMBITION. ↗</span></figcaption></figure></section>
+    <section class="section details" aria-labelledby="detail-heading"><div class="section-heading"><div><p class="eyebrow">THE DETAILS MAKE THE DIFFERENCE</p><h2 id="detail-heading">Precision in every detail.</h2></div><p>A closer look at the ingredients<br>behind a consistent experience.</p></div><div class="detail-grid"><article class="foundation-detail" id="foundation-detail"><div class="detail-header"><span class="eyebrow">01 / FOUNDATIONS</span><button class="text-link" data-guide="foundations">View guide ↗</button></div><div class="type-specimen"><span>Aa</span><div>Clarity in design.<br>Unity in experience.<small>THE PRINCIPLE, IN PRACTICE.</small></div></div><div class="swatches" aria-label="Concept interface color palette"><button data-color="#102B3F" style="--swatch:#102b3f;--ink:#fff"><span>Midnight</span><code>#102B3F</code></button><button data-color="#126C62" style="--swatch:#126c62;--ink:#fff"><span>Evergreen</span><code>#126C62</code></button><button data-color="#B6E96B" style="--swatch:#b6e96b;--ink:#102b3f"><span>Growth</span><code>#B6E96B</code></button><button data-color="#F3F7F9" style="--swatch:#f3f7f9;--ink:#102b3f"><span>Cloud</span><code>#F3F7F9</code></button></div><p class="detail-note">A contemporary palette with agricultural roots. Select a color to copy its value.</p></article><article class="component-detail" id="component-detail"><div class="detail-header"><span class="eyebrow">02 / COMPONENTS</span><button class="text-link" data-guide="components">View guide ↗</button></div><div class="component-demo"><div class="demo-title"><span>Small details. Clear decisions.</span><span class="demo-tag">INTERACTIVE SAMPLE</span></div><label for="demo-name">Workspace name</label><input id="demo-name" placeholder="e.g. Cooperative services" maxlength="60"><div class="demo-controls"><label class="switch-label"><input id="demo-notify" type="checkbox" checked><span class="switch" aria-hidden="true"></span>Keep me updated</label><button id="demo-save" class="sample-button">Save workspace <span aria-hidden="true">→</span></button></div><p id="demo-message" role="status">Try a few building blocks. This example stays in your browser.</p></div><p class="detail-note">Illustrative controls · Explore the Agrikit reference for library contracts.</p></article></div></section>
+    <section class="agent-strip"><div class="agent-symbol" aria-hidden="true">{<span><svg class="field-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26L26 6"/></svg></span>}</div><div><p class="eyebrow">THE NEXT GENERATION OF OUR WORKFLOW</p><h2>Human expertise. Agent-ready context.</h2><p>Bring the system into your workflow with Agrikit’s component knowledge, theme tokens, and MCP tools.</p></div><a class="text-link" href="https://state-of-agrikit.netlify.app/deck/" target="_blank" rel="noopener">Meet the toolkit <span aria-hidden="true">↗</span></a></section>
+    <section class="purpose-story" aria-labelledby="purpose-heading"><figure><img src="/forward-together/assets/people-and-purpose.webp" width="1100" height="733" loading="lazy" alt="Three illustrated agricultural professionals share knowledge while examining young crops in a field."></figure><div><p class="eyebrow">CONNECTED BY SOMETHING BIGGER</p><h2 id="purpose-heading">Real people.<br>Shared purpose.<br><span>Lasting progress.</span></h2><p>Behind every experience is a person. Behind our work is a cooperative mission. We design for both—with care, with intention, and with the future in view.</p><a class="text-link" href="https://www.cobank.com/feature/spirit-of-cooperatives" target="_blank" rel="noopener">Our cooperative purpose <span aria-hidden="true">↗</span></a></div>
+      <svg class="section-divider section-divider--top section-divider--purpose-entry" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0 0 H1440 V22 C1302 30 1146 54 954 43 C762 32 666 10 455 12 C272 14 149 42 0 40 Z"/>
+      </svg>
+      <svg class="section-divider section-divider--bottom section-divider--purpose" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0 23 C196 5 337 17 534 35 C780 57 1004 55 1217 34 C1302 25 1376 21 1440 21 V64 H0 Z"/>
+      </svg>
+    </section>
+    <section class="section resources" id="resources" aria-labelledby="resources-heading"><div><p class="eyebrow">YOUR NEXT MOVE</p><h2 id="resources-heading">Find your way.<br>Make your mark.</h2><p>The right resource, right when you need it.</p></div><div class="resource-list"><button data-guide="design"><span><strong>For designers</strong><small>Principles, patterns, and a shared visual language.</small></span><span class="resource-arrow" aria-hidden="true">↗</span></button><button data-guide="develop"><span><strong>For developers</strong><small>Component contracts, themes, and implementation.</small></span><span class="resource-arrow" aria-hidden="true">↗</span></button><button data-guide="content"><span><strong>For content creators</strong><small>Clear language that makes complex tasks feel simple.</small></span><span class="resource-arrow" aria-hidden="true">↗</span></button><a href="https://state-of-agrikit.netlify.app/deck/" target="_blank" rel="noopener"><span><strong>The state of Agrikit</strong><small>The engineering story and the road ahead.</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a></div></section>
+    <section class="closing"><div><p class="eyebrow">THE FUTURE IS A SHARED PROJECT</p><h2>Let’s build what’s next.</h2><button class="button" data-guide="start">Find your starting point <span aria-hidden="true">↗</span></button></div><div class="closing-art" role="img" aria-label="Two ranchers overlook grazing cattle and a winding creek, with wind turbines on the distant hills."></div>
+      <svg class="section-divider section-divider--top section-divider--ranch-entry" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0 0 H1440 C1190 0 1060 10 900 32 C775 49 654 61 470 61 C268 61 154 46 0 21 Z"/>
+      </svg>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><img class="brand-logo" src="/forward-together/assets/cobank-logo.svg" width="140" height="22" alt="CoBank"><span class="brand-divider"></span><span class="brand-label">Design<br>System</span></a><p>Human at heart. Forward by design.</p><div><a href="#resources">Field guides</a><a href="https://www.cobank.com/" target="_blank" rel="noopener">CoBank.com ↗</a><span class="concept-label">Design exploration · 2026</span></div></footer>
+  <system-search></system-search><field-guide></field-guide><div id="toast" class="toast" role="status"></div>
+</body>
 </html>
