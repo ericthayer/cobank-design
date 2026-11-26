@@ -20,6 +20,9 @@ export default defineConfig({
     force: true,
   },
   build: {
+    rollupOptions: {
+      input: ['index.html', 'archive/bootstrap/index.html'],
+    },
     commonjsOptions: {
       include: [/node_modules/]
     }

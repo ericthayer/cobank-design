@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -62,6 +63,7 @@ export const Header: React.FC<HeaderProps> = ({
   onMenuToggle,
   isDrawerOpen,
 }) => {
+  const navigate = useNavigate();
   const theme = useTheme();
   const { isDarkMode, toggleDarkMode } = useCustomTheme();
 
@@ -135,7 +137,7 @@ export const Header: React.FC<HeaderProps> = ({
               },
               filter: isDarkMode ? 'grayscale(1), ' : 'none',
             }}
-            onClick={() => (window.location.href = '/')}
+            onClick={() => navigate('/')}
           />
         </Box>
 
