@@ -1,5 +1,6 @@
 import './field-guide.js';
 import './system-search.js';
+import { initMobileNavigation } from './mobile-navigation.js';
 
 const roles={
   design:{title:'Start with the system. Make it your own.',body:'Find the right pattern, compose with shared components, and bring the details into focus.',label:'Open the design field guide'},
@@ -26,9 +27,5 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(!document.querySelector('dialog[open]'))document.querySelector('system-search').show();}});
 const tabs=[...document.querySelectorAll('[data-role]')];
 document.querySelector('.role-tabs').addEventListener('keydown',e=>{let index=tabs.indexOf(document.activeElement);if(index===-1)return;if(e.key==='ArrowRight')index=(index+1)%tabs.length;else if(e.key==='ArrowLeft')index=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')index=0;else if(e.key==='End')index=tabs.length-1;else return;e.preventDefault();selectRole(tabs[index].dataset.role);tabs[index].focus();});
-const menuToggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
-const closeMenu=()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Open menu');};
-menuToggle.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')!=='true';nav.classList.toggle('open',open);menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu');});
-nav.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menuToggle.focus();}});
+initMobileNavigation(document.querySelector('.menu-toggle'), document.querySelector('#mobile-navigation'));
 document.querySelector('#demo-save').addEventListener('click',()=>{const input=document.querySelector('#demo-name'),message=document.querySelector('#demo-message');const name=input.value.trim();if(!name){input.setAttribute('aria-invalid','true');input.setAttribute('aria-describedby','demo-message');message.textContent='Add a workspace name to try this interaction.';input.focus();return;}input.removeAttribute('aria-invalid');message.textContent=`“${name}” saved for this preview. Updates ${document.querySelector('#demo-notify').checked?'on':'off'}.`;showToast('Example workspace saved');});

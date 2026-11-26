@@ -17,8 +17,22 @@
   <header class="site-header">
     <a class="brand" href="#" aria-label="CoBank Design System home"><img class="brand-logo" src="assets/cobank-logo.svg" width="140" height="22" alt="CoBank"><span class="brand-divider"></span><span class="brand-label">Design<br>System</span></a>
     <nav aria-label="Main navigation" id="main-nav"><a href="#foundations">Foundations</a><a href="#components">Components</a><a href="#workflows">Workflows</a><a href="#resources">Resources</a></nav>
-    <div class="header-actions"><button class="search-trigger" data-search aria-label="Search the design system"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><kbd>⌘ K</kbd></button><button class="button button-small" data-guide="start">Get started <span aria-hidden="true">↗</span></button><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button></div>
+    <div class="header-actions"><button class="search-trigger" data-search aria-label="Search the design system"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><kbd>⌘ K</kbd></button><button class="button button-small" data-guide="start">Get started <span aria-hidden="true">↗</span></button><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" aria-haspopup="dialog"><span></span><span></span></button></div>
   </header>
+  <dialog id="mobile-navigation" class="mobile-navigation" aria-label="Menu">
+    <div class="mobile-navigation-header">
+      <span class="brand"><img class="brand-logo" src="assets/cobank-logo.svg" width="140" height="22" alt="CoBank"><span class="brand-divider"></span><span class="brand-label">Design<br>System</span></span>
+      <button class="mobile-navigation-close" type="button" data-menu-close aria-label="Close menu" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#foundations">Foundations <span aria-hidden="true">↗</span></a>
+      <a href="#components">Components <span aria-hidden="true">↗</span></a>
+      <a href="#workflows">Workflows <span aria-hidden="true">↗</span></a>
+      <a href="#resources">Resources <span aria-hidden="true">↗</span></a>
+    </nav>
+  </dialog>
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
       <figure class="hero-art"><img src="assets/agricultural-frontier.webp" width="1672" height="941" alt="Cinematic illustration of an agricultural specialist and a farmer sharing ideas, with cooperative workers, green crop fields, and grain silos on the horizon." fetchpriority="high"><figcaption>OUR PEOPLE. OUR PURPOSE. OUR NEXT CHAPTER.</figcaption></figure>
