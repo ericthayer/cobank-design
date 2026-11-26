@@ -336,3 +336,8 @@ small { font-size: 12px; }
 @media (max-width: 600px) {
   .intro-roots { top: -3px; }
 }
+
+@media (width > 600px) {
+  .explore > .section-heading { align-items: center; }
+  .explore > .section-heading > p { padding-bottom: 0; }
+}
