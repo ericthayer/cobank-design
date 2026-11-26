@@ -298,44 +298,12 @@ small { font-size: 12px; }
   }
 }
 
-/* Carry the hero's white edge through the intro into the Explore surface. */
-.intro-band,
-.explore {
-  --intro-explore-blend: #f9fbfc;
-}
-
+/* Complete the fade before the Explore section begins. */
 .intro-band {
-  position: relative;
-  isolation: isolate;
-  background: linear-gradient(to bottom, var(--paper), var(--intro-explore-blend));
+  background: linear-gradient(to bottom, var(--paper) 55%, var(--paper-dark) 100%);
 }
 
-.intro-roots {
-  position: absolute;
-  inset: -5px 0 auto auto;
-  z-index: -1;
-  width: max(100%, 780px);
-  height: min(100%, 220px);
-  fill: none;
-  stroke: #527865;
-  stroke-width: 1.45;
-  stroke-linecap: round;
-  opacity: .2;
-  mask-image: linear-gradient(to bottom, #000 8%, #0008 45%, transparent 100%);
-  pointer-events: none;
-}
-
-.explore {
-  background: linear-gradient(
-    to bottom,
-    var(--intro-explore-blend),
-    var(--paper-dark) clamp(75px, 10vw, 150px)
-  );
-}
-
-@media (max-width: 600px) {
-  .intro-roots { top: -3px; }
-}
+.explore { background: var(--paper-dark); }
 
 @media (width > 600px) {
   .explore > .section-heading { align-items: center; }
